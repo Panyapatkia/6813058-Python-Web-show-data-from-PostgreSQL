@@ -10,9 +10,9 @@ def index():
 def dat_api():
     contact = my_select()
     return contact
-@app.route('/movies')
+@app.route('/movie')
 def view():
     contact = my_select()
-    return render_template("movies.html", contact=contact);
+    return render_template("movie.html", contact=contact);
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=80, debug=True)
