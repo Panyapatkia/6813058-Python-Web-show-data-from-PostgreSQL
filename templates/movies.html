@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie List</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        th {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie List</h1>
+	<img src="static/images/death-whisper.jpg" alt="Movie Logo" width="200" height="150">
+	<img src="static/images/4-Tiger.jpg" alt="Movie Logo" width="200" height="150">
+	<img src="static/images/Predator-Badlands.jpg" alt="Movie Logo" width="200" height="150">
+	<img src="static/images/THE RUNNING MAN.jpg" alt="Movie Logo" width="200" height="150">
+	<img src="static/images/Wicked For Good.jpg" alt="Movie Logo" width="200" height="150">
+    <table>
+        <tr>
+            <th>MID</th>
+            <th>English Title</th>
+            <th>Release Date</th>
+            <th>Genre</th>
+            <th>Country</th>
+        </tr>
+        {% for row in contact %}
+        <tr>
+            {% for col in row %}
+            <td>{{ col }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Back to Student Page</a>
+</body>
+</html>
+
+
+
+
+
